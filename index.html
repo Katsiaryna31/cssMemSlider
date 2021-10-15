@@ -3,35 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="HarryP-MVZ6w.ttf" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" >
     <title>CssMemSlider</title>
 </head>
 <body>
-    <h1>Mems from Harry Potter</h1>
-    <p>To fans of Harry Potter dedicates</p>
-    <div class="slider">
-        <div id="slide1">
-            <img src="images/1.png" alt="first mem">
-            <p>Voldemort's face is flat because he ran into the wrong wall at the train station</p>
+    <section class="main">
+        <h1>Mems from Harry Potter</h1>
+        <p class="text">To fans of Harry Potter dedicates</p>
+        <div class="slider-container">
+        <div class="slider">
+            <div class="slider-wrapper">
+                <div id="slide1" class="slide-item">
+                    <div class="slide-wrapper">
+                        <img src="images/1.png" alt="first mem">
+                    </div>
+                    <p>Voldemort's face is flat because he ran into the wrong wall at the train station</p>
+                </div>
+                <div id="slide2" class="slide-item">
+                    <div class="slide-wrapper">
+                        <img src="images/2.png" alt="second mem">
+                        
+                    </div>
+                    <p>What do you mean "Fly to Hogwarts?". Why can't we just email.</p>
+                </div>
+                <div id="slide3" class="slide-item">
+                    <div class="slide-wrapper">
+                        <img src="images/3.png" alt="third mem">
+                       
+                    </div>
+                    <p>After finally graduating</p>
+                </div>
+                <div id="slide4" class="slide-item">
+                    <div class="slide-wrapper">
+                        <img src="images/4.png" alt="fourth mem">
+                        
+                    </div>
+                    <p>Spam from Hogwarts</p>
+                </div>
+            </div>
         </div>
-        <div id="slide2">
-            <img src="images/2.png" alt="second mem">
-            <p>What do you mean "Fly to Hogwarts?". Why can't we just email.</p>
-        </div>
-        <div id="slide3">
-            <img src="images/3.png" alt="third mem">
-            <p>After finally graduating</p>
-        </div>
-        <div id="slide4">
-            <img src="images/4.png" alt="fourth mem">
-            <p>Spam from Hogwarts</p>
-        </div>
-    </div>
-    <div class="buttons">
-        <a href="#slide1">1</a>
-        <a href="#slide2">2</a>
-        <a href="#slide3">3</a>
-        <a href="#slide4">4</a>
-    </div>
+        <div class="buttons">
+            <a href="#slide1">1</a>
+            <a href="#slide2">2</a>
+            <a href="#slide3">3</a>
+            <a href="#slide4">4</a>
+        </div>  
+</div>
+    </section>
+    
 </body>
 </html>
