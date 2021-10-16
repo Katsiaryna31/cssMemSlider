@@ -37,23 +37,22 @@ p {
     text-align: center;
 }
 
-
 .slider-container {
     width: 90%;
     height: auto;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: auto 40px 40px 40px 40px;
+    grid-template-rows: 1fr 1fr;
 }
 
 .slider {
     width: 100%;
     overflow: hidden;
-    grid-row-start: 0;
-    grid-row-end: 1;
-    grid-column-start: 0;
-    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 6;
 }
 
 .slider-wrapper {
@@ -78,13 +77,75 @@ p {
     display: block;
 }
 
-.buttons {
-    grid-row-start: 0;
-    grid-row-end: 1;
-    grid-column-start: 0;
-    grid-column-end: 1;
-    z-index: 10;
-    align-self: end;
-    justify-self: end;
-    margin: 24px 0;
+.texts {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
+
+#button1 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#button2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+#button3 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+#button4 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+
+input {
+    font-size: 0;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    display: block;
+    position: relative;
+    outline: none;
+    
+}
+
+input::before {
+    position:absolute;
+    content:'';
+    top:-20px;
+    right:-20px;
+    left:-20px;
+    bottom:-20px;
+}
+
+.slider-container > input:nth-of-type(1):checked ~ .slider .slider-wrapper {
+    margin-left: 0;
+}
+
+.slider-container > input:nth-of-type(2):checked ~ .slider .slider-wrapper {
+    margin-left: -100%;
+}
+
+.slider-container > input:nth-of-type(3):checked ~ .slider .slider-wrapper {
+    margin-left: -200%;
+}
+
+.slider-container > input:nth-of-type(4):checked ~ .slider .slider-wrapper {
+    margin-left: -300%;
+}
+
