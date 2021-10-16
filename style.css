@@ -113,24 +113,63 @@ p {
 }
 
 input {
-    font-size: 0;
-    padding: 10px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    border: 2px solid #ffffff;
-    display: block;
     position: relative;
-    outline: none;
-    
+    outline: none; 
+    margin: 29px 0; 
 }
 
 input::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: 2px solid #ffffff;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+input::after {
     position:absolute;
     content:'';
     top:-20px;
     right:-20px;
     left:-20px;
     bottom:-20px;
+}
+
+input:checked {
+    -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input:checked::before {
+    background:transparent;
+}
+
+
+
+input:hover::before {
+    background: #7e7c7c;
+    border: 2px solid #7e7c7c;
+    cursor: pointer;
+} 
+
+input:checked:hover::before  {
+    border: 2px solid #7e7c7c;
+    background:transparent;
+}
+
+input:hover::after {
+    cursor: pointer;
+} 
+
+input:active::before {
+    background: #a04f4f;
+    border: 2px solid #a04f4f;
 }
 
 .slider-container > input:nth-of-type(1):checked ~ .slider .slider-wrapper {
