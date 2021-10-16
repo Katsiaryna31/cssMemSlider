@@ -1,0 +1,328 @@
+@font-face {
+    font-family: Harry;
+    src: url(./HarryP-MVZ6w.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+html {
+    font-size: 24px;
+}
+
+body {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: Harry, Arial, sans-serif;
+    background: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+
+
+
+h1 {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+
+p {
+    font-size: 1rem;
+    
+}
+
+.text {
+    text-align: center;
+}
+
+.slider-container {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 40px 40px 40px 40px;
+    grid-template-rows: 1fr 1fr;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+.slide-item {
+    width: 100%;
+}
+
+.slide-wrapper {
+    width: 100%;
+    margin: 0;
+    background: url('images/back-image.jpg');
+    background-size: cover;
+}
+
+.slide-wrapper img {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.texts {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#button1 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#button2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+#button3 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+#button4 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+
+input {
+    position: relative;
+    outline: none; 
+    margin: 29px 0; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: 2px solid #ffffff;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+input::after {
+    position:absolute;
+    content:'';
+    top:-15px;
+    right:-20px;
+    left:-15px;
+    bottom:-20px;
+}
+
+input:checked {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input:checked::before {
+    background:transparent;
+}
+
+
+
+input:hover::before {
+    background: #7e7c7c;
+    border: 2px solid #7e7c7c;
+    cursor: pointer;
+} 
+
+input:checked:hover::before  {
+    border: 2px solid #7e7c7c;
+    background:transparent;
+}
+
+input:hover::after {
+    cursor: pointer;
+} 
+
+input:active::before {
+    background: #a04f4f;
+    border: 2px solid #a04f4f;
+}
+
+.slider-wrapper {
+    display: grid;
+    grid-template: 100%/100%;
+}
+
+.slide-item {
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity:0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.slider-container > input:nth-of-type(1):checked ~ .slider .slider-wrapper #slide1 {
+    opacity:1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+}
+
+.slider-container > input:nth-of-type(2):checked ~ .slider .slider-wrapper #slide2 {
+    opacity:1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+}
+
+.slider-container > input:nth-of-type(3):checked ~ .slider .slider-wrapper #slide3 {
+    opacity:1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+}
+
+.slider-container > input:nth-of-type(4):checked ~ .slider .slider-wrapper #slide4 {
+    opacity:1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+}
+
+.texts {
+    display: grid;
+    grid-template: 100%/100%;
+}
+
+.texts p {
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity:0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.slider-container > input:nth-of-type(1):checked ~ .texts #text1 {
+    opacity:1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+}
+
+.slider-container > input:nth-of-type(2):checked ~ .texts #text2 {
+    opacity:1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+}
+
+.slider-container > input:nth-of-type(3):checked ~ .texts #text3 {
+    opacity:1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+}
+
+.slider-container > input:nth-of-type(4):checked ~ .texts #text4 {
+    opacity:1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        grid-template-columns: auto 40px 40px 40px 40px auto;
+        grid-template-rows: auto auto 70px;
+    }
+
+    .slider {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 7;
+    }
+
+    .texts {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 7;
+    }
+    
+    #button1 {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    
+    #button2 {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    
+    #button3 {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+    
+    #button4 {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 5;
+        grid-column-end: 6;
+    }
+
+    input::before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: 8px;
+        width: 20px;
+        height: 20px;
+        background: #ffffff;
+        border: 2px solid #ffffff;
+        z-index: 10;
+        border-radius: 50%;
+    }
+
+    input::after {
+        top: -10px;
+        right:-5px;
+        left:-5px;
+        bottom: -30px;
+    }
+    
+}
+
